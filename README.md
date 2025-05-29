@@ -25,11 +25,7 @@ db.todo.insertMany([{ tasktodo:"go for grocery shopping"},{time:new Date()},])
     '1': ObjectId('6836e2692fa3675ffe5d0ebf')
   }
 }
-db.todo.insertMany([{ tasktodo:"go for grocery shopping"},{time:new Date(),{status:completed},{tasktodo:"pick clothes"},{time:new Date()}})])
-SyntaxError: Unexpected token (1:75)
-
-[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39mtodo[33m.[39minsertMany([{ tasktodo[33m:[39m[32m"go for grocery shopping"[39m}[33m,[39m{time[33m:[39m[36mnew[39m [33mDate[39m()[33m,[39m{status[33m:[39mcompleted}[33m,[39m{tasktodo[33m:[39m[32m"pick clothes"[39m}[33m,[39m{time[33m:[39m[36mnew[39m [33mDate[39m()}})])
- [90m   |[39m                                                                            [31m[1m^[22m[39m[0m
+                                                                        
 // Insert multiple books
 db.books.insertMany([
   {
@@ -45,63 +41,7 @@ db.books.insertMany([
   {
     tasktodo: "study terraform",
     time: new Date("2023-01-15T10:00:00Z")
-  },
-  {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    published_year: 1925,
-    genres: ["Fiction", "Classic"],
-    stock: 3,
-    pages: 180,
-    last_borrowed: new Date("2023-01-15T10:00:00Z") // Example of a Date
-  }
-])
-
-// Example output:
-// {
-//   acknowledged: true,
-//   insertedIds: [
-//     ObjectId("63d..."),
-//     ObjectId("63d..."),
-//     ObjectId("63d...")
-//   ]
-// }
-ReferenceError: completed is not defined
-// Insert multiple books
-db.books.insertMany([
-  {
-    tasktodo:"go to grocery shopping",
-    time: new Date(),
-    status:completed
-  },
-  {
-    tasktodo: "study mongoDB",
-    time: new Date("2023-01-15T10:00:00Z"),
-    status: incomplete
-  },
-  {
-    tasktodo: "study terraform",
-    time: new Date("2023-01-15T10:00:00Z"),
-  },
-  {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    published_year: 1925,
-    genres: ["Fiction", "Classic"],
-    stock: 3,
-    pages: 180,
-    last_borrowed: new Date("2023-01-15T10:00:00Z") // Example of a Date
-  }
-])
-
-\
-SyntaxError: Expecting Unicode escape sequence \uXXXX. (28:1)
-
-[0m [90m 26 |[39m ])
- [90m 27 |[39m
-[31m[1m>[22m[39m[90m 28 |[39m [37m[41m[1m\[22m[49m[39m
- [90m    |[39m  [31m[1m^[22m[39m
- [90m 29 |[39m[0m
+  })
 // Insert multiple books
 db.books.insertMany([
   {
@@ -124,14 +64,6 @@ db.books.insertMany([
   },
 ])
 
-\
-SyntaxError: Expecting Unicode escape sequence \uXXXX. (23:1)
-
-[0m [90m 21 |[39m ])
- [90m 22 |[39m
-[31m[1m>[22m[39m[90m 23 |[39m [37m[41m[1m\[22m[49m[39m
- [90m    |[39m  [31m[1m^[22m[39m
- [90m 24 |[39m[0m
 // Insert multiple books
 db.books.insertMany([
   {
@@ -375,11 +307,7 @@ db.books.insertOne({status:{$exists:false}},{$set:{status:false}})
   acknowledged: true,
   insertedId: ObjectId('6836ea512fa3675ffe5d0ecd')
 }
-db.books.updateMany({{status:{$exists:false}},{$set:{status:false}})
-SyntaxError: Unexpected token (1:21)
 
-[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39mbooks[33m.[39mupdateMany({{status[33m:[39m{$exists[33m:[39m[36mfalse[39m}}[33m,[39m{$set[33m:[39m{status[33m:[39m[36mfalse[39m}})
- [90m   |[39m                      [31m[1m^[22m[39m[0m
 db.books.updateMany(
   { status: { $exists: false } },  
   { $set: { status: false } }     
